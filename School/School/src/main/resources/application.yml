@@ -1,0 +1,27 @@
+#spring:
+#  application:
+#    name: school
+#  config:
+#    import: optional:configserver:http://localhost:8888
+#
+server:
+  port: 9090
+
+spring:
+  application:
+    name: school
+  config:
+    import: optional:configserver:http://localhost:8888
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/school
+    username: postgres
+    password: Javith@123
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+
+
+
+
